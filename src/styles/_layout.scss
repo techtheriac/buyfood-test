@@ -1,0 +1,11 @@
+.container__main {
+  display: grid;
+  grid-template-columns: 30ch 1fr;
+  min-height: 100vh;
+}
+
+.container__side {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -4,7 +4,7 @@ import SocialHandles from './SocialHandles';
 import VerifyAccount from './VerifyAccounts';
 
 const FormContainer = () => {
-  const [routeIndex, setRouteIndex] = React.useState(1);
+  const [formIndex, setformIndex] = React.useState(1);
 
   return (
     <div>
@@ -15,39 +15,45 @@ const FormContainer = () => {
       </div>
 
       <div>
-        <small>Step {routeIndex}/3</small>
+        <small>Step {formIndex}/3</small>
       </div>
 
-      <div>
+    
+    <form>
+        <div>
 
-      {
-        routeIndex == 2 ? (
-          <SocialHandles />
-        ) : 
-        routeIndex == 3 ? (
-          <BusinessCategory />
-        ) : (
-          <VerifyAccount /> 
-        )
-        
-      }
-        
-      </div>
-
-
-      <div>
-        <button onClick={() => {
-          if(routeIndex == 3) {
-            return;
-          }
-          setRouteIndex(routeIndex + 1)}
+        {
+          formIndex == 2 ? (
+            <SocialHandles />
+          ) : 
+          formIndex == 3 ? (
+            <BusinessCategory />
+          ) : (
+            <VerifyAccount /> 
+          )
+          
         }
-        >
-          {
-            routeIndex == 2 ? "Confirm Social Handler" : routeIndex == 3 ? "Complete" : "Continue"
+          
+        </div>
+
+
+        <div>
+          <button onClick={(event) => {
+
+            if(formIndex == 3) {
+              return;
+            }
+            setformIndex(formIndex + 1)
+            event.preventDefault();
+            }
           }
-        </button>
-      </div>
+          >
+            {
+              formIndex == 2 ? "Confirm Social Handler" : formIndex == 3 ? "Complete" : "Continue"
+            }
+          </button>
+        </div>
+    </form>
 
     </div>
   )
