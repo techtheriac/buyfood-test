@@ -19,5 +19,4 @@ const Caret = () => {
   );
 };
 
-
 export default Caret;

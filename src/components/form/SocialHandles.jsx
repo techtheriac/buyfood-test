@@ -5,7 +5,7 @@ const SocialHandles = () => {
     <div className="flow-vr-s">
       <div>
         <h1 className="form__heading">Social Handles</h1>
-        <small class="text--muted">Enter your business social handles</small>
+        <small className="text--muted">Enter your business social handles</small>
       </div>
 
       <div className="wrapper__input__vr">

@@ -31,12 +31,21 @@
   color: var(--white);
 }
 
+.my-m {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
 .flow-vr-m > * + * {
   margin-top: 4rem;
 }
 
 .flow-vr-s > * + * {
   margin-top: 3.5rem;
+}
+
+.flow-vr-xs > * + * {
+  margin-top: 1rem;
 }
 
 .flow-hr-xs * + * {

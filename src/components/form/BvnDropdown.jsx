@@ -1,9 +1,12 @@
 import * as React from "react";
 import Lock from "../icons/Lock";
-import Caret from '../icons/Caret';
+import Caret from "../icons/Caret";
+import Tick from "../icons/Tick";
 
 const BvnDropDown = () => {
   const [showDropdown, setShowDropdown] = React.useState(true);
+
+  const bvnCredentials = ["Full Name", "Phone Number", "Date of birth"];
 
   return (
     <div className="background--offwhite bvn__dropdown">
@@ -12,21 +15,29 @@ const BvnDropDown = () => {
           <Lock />
           <small>Why we need your BVN</small>
         </div>
-        
-        <div className="flow-hr-xs" onClick={() => setShowDropdown(!showDropdown)}>
+
+        <div
+          className="flow-hr-xs"
+          onClick={() => setShowDropdown(!showDropdown)}
+        >
           <small>{!showDropdown ? "Show" : "Hide"}</small>
           <Caret />
         </div>
       </div>
       {showDropdown && (
-        <div>
-          <small>Why we need access to your:</small>
-          <ul>
-            <li>Full Name</li>
-            <li>Phone Number</li>
-            <li>Date of birth</li>
+        <div className="container__bvn__credentials flow-vr-xs">
+          <small className="text--muted-01">We only need access to your:</small>
+          <ul className="flow-vr-xs">
+            {
+               bvnCredentials.map((credential, index) => {
+                 return (
+                   <li className="flow-hr-xs text--muted-01" key={index}><Tick /> <span>{credential}</span></li>
+                 )
+               })
+             
+            }
           </ul>
-          <hr />
+
           <p>
             Your bvn does not give us access to your bank account or
             transactions

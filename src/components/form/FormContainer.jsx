@@ -20,7 +20,7 @@ const FormContainer = () => {
         </p>
       </div>
 
-      <div>
+      <div className="my-m">
         <small className="text--muted">Step {formIndex}/3</small>
       </div>
 

@@ -20,8 +20,12 @@ const BusinessCategory = () => {
       <div className="wrapper__input__vr">
         <small>Do you use POS Machines for your business?</small>
         <div className="flow-hr-xs">
-          <button className="btn__pill">Yes</button>
-          <button className="btn__pill">No</button>
+          <button onClick={(e) => e.preventDefault()} className="btn__pill">
+            Yes
+          </button>
+          <button onClick={(e) => e.preventDefault()} className="btn__pill">
+            No
+          </button>
         </div>
       </div>
     </div>
