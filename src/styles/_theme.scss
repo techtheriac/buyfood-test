@@ -1,14 +1,25 @@
 :root {
-  --red: #FF6774;
+  --white: #ffffff;
+  --red: #ff6774;
   --black: #141737;
-  --blue:  #006AFF;
-  --blue-00: #DCEAFF;
-  --blue-01: #E4E9EF;
-  --blue-02: #A5B4CB;
-  --blue-03: #E9EEF4;
-  --gold: #F3E8C9;
+  --blue: #006aff;
+  --blue-00: #dceaff;
+  --blue-01: #e4e9ef;
+  --blue-02: #a5b4cb;
+  --blue-03: #e9eef4;
+  --blue-04: #7d8da7;
+  --gold: #f3e8c9;
+  --off-white: #f5f6fa;
 }
 
 .background--gold {
   background-color: var(--gold);
+}
+
+.background--offwhite {
+  background-color: var(--blue-03);
+}
+
+.text--muted {
+  color: var(--blue-04);
 }

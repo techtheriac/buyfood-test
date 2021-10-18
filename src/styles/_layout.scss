@@ -1,3 +1,13 @@
+%flex-vr {
+  display: flex;
+  flex-direction: column;
+}
+
+%flex-hr {
+  display: flex;
+  flex-direction: row;
+}
+
 .container__main {
   display: grid;
   grid-template-columns: 30ch 1fr;
@@ -8,4 +18,32 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.content__main {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 6rem;
+}
+
+.main__btn__wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.form__wrapper__steps {
+  display: flex;
+}
+
+.wrapper__input__vr {
+  > * + * {
+    margin-top: 0.3rem;
+  }
+
+  @extend %flex-vr;
+}
+
+.wrapper__space-between {
+  @extend %flex-hr;
+  justify-content: space-between;
 }

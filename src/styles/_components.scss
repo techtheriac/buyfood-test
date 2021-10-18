@@ -1,0 +1,32 @@
+.bvn__dropdown {
+  border-radius: 0.5rem;
+  padding: 2.2rem;
+}
+
+.container__btn__continue {
+  margin-top: 4.8rem;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 2rem;
+  border-top: 1px solid var(--blue-03);
+}
+
+.container__form__progress {
+  border-bottom: 1px solid var(--blue-03);
+  padding-bottom: 2rem;
+}
+
+.container__drop__toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  > div:nth-child(2) {
+    cursor: pointer;
+  }
+
+  > * {
+    display: flex;
+    align-items: center;
+  }
+}
