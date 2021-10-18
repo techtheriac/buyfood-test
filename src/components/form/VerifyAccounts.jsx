@@ -1,70 +1,72 @@
-import * as React from 'react';
+import * as React from "react";
+import BvnDropdown from "./BvnDropdown";
 
 const VerifyAccount = () => {
-
-  const [showDropdown, setShowDropdown] = React.useState(false);
+  const [showDropdown, setShowDropdown] = React.useState(true);
   const [bvnInput, setBvnInput] = React.useState(true);
 
-  return (
-    <div>
-      <h1>Verify Account</h1>
+  function showBvnInput() {
+    setBvnInput(true);
+  }
 
-      <div>
+  function showPersonalAccountInput() {
+    setBvnInput(false);
+    setShowDropdown(false);
+  }
+
+  return (
+    <div className="flow-vr-s">
+      <h1 className="form__heading">Verify Account</h1>
+
+      <div className="wrapper__input__vr">
         <small>Select a verification method</small>
-        <span>
-          <button onClick={(event) => {
-            event.preventDefault();
-            setBvnInput(true)
-          }}>bvn</button>
-          <button onClick={(event) => {
-            event.preventDefault();
-            setBvnInput(false);
-          }}>personal account number</button>
+        <span className="flow-hr-xs">
+          <button
+            className="btn__pill"
+            onClick={(e) => {
+              showBvnInput();
+              e.preventDefault();
+            }}
+          >
+            BVN
+          </button>
+
+          <button
+            className="btn__pill"
+            onClick={(e) => {
+              showPersonalAccountInput();
+              e.preventDefault();
+            }}
+          >
+            Personal Account Number
+          </button>
         </span>
       </div>
 
       <div>
-        {
-          bvnInput ?  (
-            <div>
-              <small>Bank Verification Number (11-digits)</small>
-              <input />
+        {bvnInput ? (
+          <div className="wrapper__input__vr">
+            <small>Bank Verification Number (11-digits)</small>
+            <input className="form__input" />
+          </div>
+        ) : (
+          <div className="wrapper__space-between">
+            <div className="wrapper__input__vr">
+              <small>Account Number</small>
+              <input className="form__input" />
             </div>
-          ) : (
-            <div>
-              <div>
-                <small>Account Number</small>
-                <input />
-              </div>
 
-              <div>
-                <small>Selec Bank</small>
-                <input />
-              </div>
+            <div className="wrapper__input__vr">
+              <small>Select Bank</small>
+              <input className="form__input" />
             </div>
-          )
-        }
+          </div>
+        )}
       </div>
 
-        <div>
-        {
-          showDropdown && (
-            <div>
-              <small>Why we need access to your:</small>
-              <ul>
-                <li>Full Name</li>
-                <li>Phone Number</li>
-                <li>Date of birth</li>
-              </ul>
-              <hr />
-              <p>Your bvn does not give us access to your bank account or transactions</p>
-            </div>
-          )
-        }
-      </div>
-      
+      <div>{bvnInput && <BvnDropdown />}</div>
     </div>
-  )
-}
+  );
+};
 
 export default VerifyAccount;
