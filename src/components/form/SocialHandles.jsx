@@ -13,7 +13,7 @@ const SocialHandles = () => {
         <input className="form__input" />
       </div>
 
-      <div className="wrapper__space-between">
+      <div className="wrapper__autofit">
         <div className="wrapper__input__vr">
           <small>Instagram</small>
           <input className="form__input" />

@@ -50,7 +50,7 @@ const VerifyAccount = () => {
             <input className="form__input" />
           </div>
         ) : (
-          <div className="wrapper__space-between">
+          <div className="wrapper__autofit">
             <div className="wrapper__input__vr">
               <small>Account Number</small>
               <input className="form__input" />

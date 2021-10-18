@@ -43,7 +43,13 @@
   @extend %flex-vr;
 }
 
-.wrapper__space-between {
-  @extend %flex-hr;
-  justify-content: space-between;
+.wrapper__autofit {
+  --min: 15ch;
+  --gap: 3rem;
+
+  display: grid;
+  grid-gap: var(--gap);
+  /* min() with 100% prevents overflow
+  in extra narrow spaces */
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
 }
