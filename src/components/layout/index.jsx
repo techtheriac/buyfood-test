@@ -2,8 +2,20 @@ import * as React from "react";
 import FormContainer from "../form/FormContainer";
 
 const Layout = ({}) => {
+
+  let fadeContainer = React.useRef(null);
+
+  React.useEffect(() => {
+    fadeContainer.classList.add("fade");
+  }, []);
+
+
   return (
-    <main className="container__main">
+    <main
+     ref={(el) => {
+        fadeContainer = el;
+      }} 
+    className="container__main">
       <div className="container__side background--gold">
         <figure>
           <img

@@ -1,8 +1,19 @@
 import * as React from "react";
 
 const SocialHandles = () => {
+  let fadeContainer = React.useRef(null);
+
+  React.useEffect(() => {
+    fadeContainer.classList.add("fade");
+  }, []);
+
   return (
-    <div className="flow-vr-s">
+    <div
+      ref={(el) => {
+        fadeContainer = el;
+      }}
+      className="flow-vr-s"
+    >
       <div>
         <h1 className="form__heading">Social Handles</h1>
         <small className="text--muted">

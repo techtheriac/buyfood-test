@@ -22,9 +22,15 @@ const VerifyAccount = () => {
         <small className="form__label-sm">Select a verification method</small>
 
         <span className="flow-hr-xs toggle__btn__group">
-          <input type="radio" name="account" id="bvn" value="small" checked />
+          <input
+            type="radio"
+            name="account"
+            id="bvn"
+            value="small"
+            defaultChecked
+          />
           <label
-            for="bvn"
+            htmlFor="bvn"
             className="btn__pill no-margin"
             onClick={(e) => {
               showBvnInput();
@@ -40,7 +46,7 @@ const VerifyAccount = () => {
             value="small"
           />
           <label
-            for="personalAccount"
+            htmlFor="personalAccount"
             className="btn__pill"
             onClick={(e) => {
               showPersonalAccountInput();
