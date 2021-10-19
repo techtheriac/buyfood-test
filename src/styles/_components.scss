@@ -131,3 +131,24 @@
     color: var(--blue-02);
   }
 }
+
+.form__select {
+  cursor: pointer;
+  display: grid;
+  grid-template-areas: "select";
+  align-items: center;
+}
+
+.form__select,
+.form__select:after {
+  grid-area: select;
+}
+
+.form__select:after {
+  content: "";
+  width: 0.8em;
+  height: 0.5em;
+  background-color: var(--blue-04);
+  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+  justify-self: end;
+}
