@@ -13,7 +13,7 @@ const BvnDropDown = () => {
       <div className="container__drop__toggle">
         <div className="flow-hr-xs">
           <Lock />
-          <small>Why we need your BVN</small>
+          <small className="form__label-m">Why we need your BVN</small>
         </div>
 
         <div
@@ -26,18 +26,19 @@ const BvnDropDown = () => {
       </div>
       {showDropdown && (
         <div className="container__bvn__credentials flow-vr-xs">
-          <small className="text--muted-01">We only need access to your:</small>
+          <small className="text--muted--01 form__label-sm-thin">We only need access to your:</small>
           <ul className="flow-vr-xs">
             {bvnCredentials.map((credential, index) => {
               return (
-                <li className="flow-hr-xs text--muted-01" key={index}>
-                  <Tick fillColor="#56F2C3" /> <span>{credential}</span>
+                <li className="flow-hr-xs text--muted--01" key={index}>
+                  <Tick fillColor="#56F2C3" /> <span className="form__label-sm-thin">{credential}</span>
                 </li>
               );
             })}
           </ul>
 
           <p>
+          🔒
             Your bvn does not give us access to your bank account or
             transactions
           </p>

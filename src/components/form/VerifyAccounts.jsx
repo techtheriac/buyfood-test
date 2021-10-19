@@ -19,7 +19,7 @@ const VerifyAccount = () => {
       <h1 className="form__heading">Verify Account</h1>
 
       <div className="wrapper__input__vr">
-        <small>Select a verification method</small>
+        <small className="form__label-sm">Select a verification method</small>
 
         <span className="flow-hr-xs toggle__btn__group">
           <input type="radio" name="account" id="bvn" value="small" checked />
@@ -54,18 +54,18 @@ const VerifyAccount = () => {
       <div>
         {bvnInput ? (
           <div className="wrapper__input__vr">
-            <small>Bank Verification Number (11-digits)</small>
+            <small className="form__label-sm">Bank Verification Number (11-digits)</small>
             <input className="form__input" />
           </div>
         ) : (
           <div className="wrapper__autofit">
             <div className="wrapper__input__vr">
-              <small>Account Number</small>
+              <small className="form__label-sm">Account Number</small>
               <input className="form__input" />
             </div>
 
             <div className="wrapper__input__vr">
-              <small>Select Bank</small>
+              <small className="form__label-sm">Select Bank</small>
               <input className="form__input" />
             </div>
           </div>

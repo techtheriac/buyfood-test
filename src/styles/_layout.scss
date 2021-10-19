@@ -51,7 +51,7 @@
 
 .wrapper__input__vr {
   > * + * {
-    margin-top: 0.5rem;
+    margin-top: 0.75rem;
   }
 
   @extend %flex-vr;

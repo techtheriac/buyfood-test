@@ -21,3 +21,18 @@
 .form__heading {
   font-size: 2.6rem;
 }
+
+.form__label-sm {
+  @extend %font-12;
+  font-weight: 500;
+}
+
+.form__label-sm-thin {
+  @extend %font-13;
+  font-weight: 400;
+}
+
+.form__label-m {
+  @extend %font-14;
+  font-weight: 500;
+}

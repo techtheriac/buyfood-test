@@ -7,18 +7,18 @@ const BusinessCategory = () => {
 
       <div className="wrapper__autofit">
         <div className="wrapper__input__vr">
-          <small>Type of your business</small>
+          <small className="form__label-sm">Type of your business</small>
           <input className="form__input" />
         </div>
 
         <div className="wrapper__input__vr">
-          <small>Business category</small>
+          <small className="form__label-sm">Business category</small>
           <input className="form__input" />
         </div>
       </div>
 
       <div className="wrapper__input__vr">
-        <small>Do you use POS Machines for your business?</small>
+        <small className="form__label-sm">Do you use POS Machines for your business?</small>
         <div className="flow-hr-xs toggle__btn__group">
           <input type="radio" name="pos" id="isPos" value="small" checked />
           <label
