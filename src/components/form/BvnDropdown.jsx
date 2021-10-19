@@ -28,14 +28,13 @@ const BvnDropDown = () => {
         <div className="container__bvn__credentials flow-vr-xs">
           <small className="text--muted-01">We only need access to your:</small>
           <ul className="flow-vr-xs">
-            {
-               bvnCredentials.map((credential, index) => {
-                 return (
-                   <li className="flow-hr-xs text--muted-01" key={index}><Tick /> <span>{credential}</span></li>
-                 )
-               })
-             
-            }
+            {bvnCredentials.map((credential, index) => {
+              return (
+                <li className="flow-hr-xs text--muted-01" key={index}>
+                  <Tick fillColor="#56F2C3" /> <span>{credential}</span>
+                </li>
+              );
+            })}
           </ul>
 
           <p>

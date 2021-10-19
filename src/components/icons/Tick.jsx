@@ -1,6 +1,6 @@
 import * as React from "react";
 
-const Tick = () => {
+const Tick = ({fillColor}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -13,11 +13,10 @@ const Tick = () => {
         fillRule="evenodd"
         clipRule="evenodd"
         d="M7.20711 0.926772L2.35355 5.78033L0 3.42677L0.707107 2.71967L2.35355 4.36611L6.5 0.219666L7.20711 0.926772Z"
-        fill="#56F2C3"
+        fill={fillColor}
       />
     </svg>
   );
 };
-
 
 export default Tick;

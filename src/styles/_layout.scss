@@ -12,6 +12,11 @@
   display: grid;
   grid-template-columns: 30ch 1fr;
   min-height: 100vh;
+
+  @media screen and (max-width: 790px) {
+    display: flex;
+    width: 100%;
+  }
 }
 
 .container__side {
@@ -24,6 +29,10 @@
   display: flex;
   flex-direction: column;
   padding: 3rem 6rem;
+
+  @media screen and (max-width: 790px) {
+    padding: 2rem 3rem;
+  }
 }
 
 .main__btn__wrapper {
@@ -45,11 +54,15 @@
 
 .wrapper__autofit {
   --min: 15ch;
-  --gap: 3rem;
+  --gap: 3.5rem;
 
   display: grid;
   grid-gap: var(--gap);
-  /* min() with 100% prevents overflow
-  in extra narrow spaces */
   grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
+}
+
+.container__side {
+  @media screen and (max-width: 790px) {
+    display: none;
+  }
 }

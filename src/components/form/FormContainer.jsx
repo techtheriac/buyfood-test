@@ -2,21 +2,49 @@ import * as React from "react";
 import BusinessCategory from "./BusinessCategory";
 import SocialHandles from "./SocialHandles";
 import VerifyAccount from "./VerifyAccounts";
+import Tick from "../icons/Tick";
 
 const FormContainer = () => {
   const [formIndex, setformIndex] = React.useState(1);
 
+  const registrationSteps = [
+    "Verify Account",
+    "Social Handles",
+    "Business Category",
+  ];
+
   return (
     <div className="flow-vr">
       <div className="form__wrapper__steps flow-hr-m container__form__progress">
+        <div>
+          {formIndex == 1 ? (
+            <span className="form__progress-pill">1</span>
+          ) : (
+            <span className="form__progress-tick">
+              <Tick fillColor="#006AFF" />
+            </span>
+          )}
+          <small>Verify Account</small>
+        </div>
+        <div>
+          {formIndex == 2 ? (
+            <span className="form__progress-pill">2</span>
+          ) : (
+            <span className="form__progress-tick">
+              <Tick fillColor="#006AFF" />
+            </span>
+          )}
+          <small>Social Handlers</small>
+        </div>
         <p>
-          <span>1</span> Verify Account
-        </p>
-        <p>
-          <span>2</span> Social Handlers
-        </p>
-        <p>
-          <span>3</span> Business Category
+          {formIndex == 3 ? (
+            <span className="form__progress-pill">3</span>
+          ) : (
+            <span className="form__progress-tick">
+              <Tick fillColor="#006AFF" />
+            </span>
+          )}
+          <small>Business Category</small>
         </p>
       </div>
 

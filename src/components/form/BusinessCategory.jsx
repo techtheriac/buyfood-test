@@ -5,7 +5,7 @@ const BusinessCategory = () => {
     <div className="flow-vr-s">
       <h1 className="form__heading">Business Category</h1>
 
-      <div className="wrapper__space-between">
+      <div className="wrapper__autofit">
         <div className="wrapper__input__vr">
           <small>Type of your business</small>
           <input className="form__input" />
