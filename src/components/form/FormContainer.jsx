@@ -30,7 +30,7 @@ const FormContainer = () => {
           )}
           <small className="form__progress-label">Social Handlers</small>
         </div>
-        <p>
+        <div>
           {formIndex == 1 || formIndex == 2 ? (
             <span className="form__progress-pill">3</span>
           ) : (
@@ -39,7 +39,7 @@ const FormContainer = () => {
             </span>
           )}
           <small className="form__progress-label">Business Category</small>
-        </p>
+        </div>
       </div>
 
       <div className="my-m">
