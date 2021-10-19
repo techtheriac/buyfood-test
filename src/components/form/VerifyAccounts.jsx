@@ -20,26 +20,29 @@ const VerifyAccount = () => {
 
       <div className="wrapper__input__vr">
         <small>Select a verification method</small>
-        <span className="flow-hr-xs">
-          <button
-            className="btn__pill"
+
+        <span className="flow-hr-xs toggle__btn__group">
+        <input type="radio" name="account" id="bvn" value="small" checked />
+          <label
+            for="bvn"
+            className="btn__pill no-margin"
             onClick={(e) => {
               showBvnInput();
-              e.preventDefault();
             }}
           >
             BVN
-          </button>
-
-          <button
+          </label>
+          
+          <input type="radio" name="account" id="personalAccount" value="small" />
+          <label
+            for="personalAccount"
             className="btn__pill"
             onClick={(e) => {
               showPersonalAccountInput();
-              e.preventDefault();
             }}
           >
             Personal Account Number
-          </button>
+          </label>
         </span>
       </div>
 

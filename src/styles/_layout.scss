@@ -15,6 +15,7 @@
 
   @media screen and (max-width: 790px) {
     display: flex;
+    flex-direction: column;
     width: 100%;
   }
 }
@@ -38,6 +39,10 @@
 .main__btn__wrapper {
   display: flex;
   justify-content: flex-end;
+
+  @media screen and (max-width: 790px) {
+    display: none;
+  }
 }
 
 .form__wrapper__steps {
@@ -46,7 +51,7 @@
 
 .wrapper__input__vr {
   > * + * {
-    margin-top: 0.3rem;
+    margin-top: 0.5rem;
   }
 
   @extend %flex-vr;
@@ -64,5 +69,12 @@
 .container__side {
   @media screen and (max-width: 790px) {
     display: none;
+  }
+}
+
+.form__wrapper__steps {
+  @media screen and (max-width: 790px) {
+    display: flex;
+    justify-content: space-evenly;
   }
 }
