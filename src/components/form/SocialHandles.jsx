@@ -12,18 +12,18 @@ const SocialHandles = () => {
 
       <div className="wrapper__input__vr">
         <small>Enter your abeg tag</small>
-        <input placeHolder="@" className="form__input" />
+        <input placeholder="@" className="form__input" />
       </div>
 
       <div className="wrapper__autofit">
         <div className="wrapper__input__vr">
           <small>Instagram</small>
-          <input placeHolder="@" className="form__input" />
+          <input placeholder="@" className="form__input" />
         </div>
 
         <div className="wrapper__input__vr">
           <small>Twitter</small>
-          <input placeHolder="@" className="form__input" />
+          <input placeholder="@" className="form__input" />
         </div>
       </div>
     </div>

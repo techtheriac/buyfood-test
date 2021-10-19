@@ -1,6 +1,7 @@
 import * as React from "react";
 
 const BusinessCategory = () => {
+
   return (
     <div className="flow-vr-s">
       <h1 className="form__heading">Business Category</h1>

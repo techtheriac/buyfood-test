@@ -27,3 +27,12 @@
 .text--muted--01 {
   color: var(--black);
 }
+
+.content {
+  opacity: 0;
+}
+
+.content .is-visible {
+  opacity: 1;
+  transition: opacity 100ms;
+}

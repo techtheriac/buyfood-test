@@ -6,28 +6,22 @@ import Tick from "../icons/Tick";
 
 const FormContainer = () => {
   const [formIndex, setformIndex] = React.useState(1);
-
-  const registrationSteps = [
-    "Verify Account",
-    "Social Handles",
-    "Business Category",
-  ];
-
+  
   return (
     <div className="flow-vr">
       <div className="form__wrapper__steps flow-hr-m container__form__progress">
         <div>
-          {formIndex == 1 ? (
-            <span className="form__progress-pill">1</span>
-          ) : (
+          {formIndex == 2 || formIndex == 3 ? (
             <span className="form__progress-tick">
               <Tick fillColor="#006AFF" />
-            </span>
+            </span>          
+          ) : (
+            <span className="form__progress-pill">1</span>
           )}
           <small>Verify Account</small>
         </div>
         <div>
-          {formIndex == 2 ? (
+          { formIndex !== 3 ? (
             <span className="form__progress-pill">2</span>
           ) : (
             <span className="form__progress-tick">
@@ -37,7 +31,7 @@ const FormContainer = () => {
           <small>Social Handlers</small>
         </div>
         <p>
-          {formIndex == 3 ? (
+          {formIndex == 1 || formIndex == 2 ? (
             <span className="form__progress-pill">3</span>
           ) : (
             <span className="form__progress-tick">
