@@ -43,14 +43,13 @@ const BusinessCategory = () => {
             type="radio"
             name="pos"
             id="isPos"
-            value="small"
             defaultChecked
           />
           <label htmlFor="isPos" className="btn__pill no-margin">
             Yes
           </label>
 
-          <input type="radio" name="pos" id="notPos" value="small" />
+          <input type="radio" name="pos" id="notPos" />
           <label htmlFor="notPos" className="btn__pill">
             No
           </label>
