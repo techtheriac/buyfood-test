@@ -6,7 +6,7 @@ import Tick from "../icons/Tick";
 
 const FormContainer = () => {
   const [formIndex, setformIndex] = React.useState(1);
-  
+
   return (
     <div className="flow-vr">
       <div className="form__wrapper__steps flow-hr-m container__form__progress">
@@ -14,21 +14,35 @@ const FormContainer = () => {
           {formIndex == 2 || formIndex == 3 ? (
             <span className="form__progress-tick">
               <Tick fillColor="#006AFF" />
-            </span>          
+            </span>
           ) : (
             <span className="form__progress-pill">1</span>
           )}
-          <small className="form__progress-label">Verify Account</small>
+          <small
+            className={
+              "form__progress-label " +
+              (formIndex === 1 ? "" : "form__progress-label--inactive")
+            }
+          >
+            Verify Account
+          </small>
         </div>
         <div>
-          { formIndex !== 3 ? (
+          {formIndex !== 3 ? (
             <span className="form__progress-pill">2</span>
           ) : (
             <span className="form__progress-tick">
               <Tick fillColor="#006AFF" />
             </span>
           )}
-          <small className="form__progress-label">Social Handlers</small>
+          <small
+            className={
+              "form__progress-label " +
+              (formIndex === 2 ? "" : "form__progress-label--inactive")
+            }
+          >
+            Social Handles
+          </small>
         </div>
         <div>
           {formIndex == 1 || formIndex == 2 ? (
@@ -38,7 +52,14 @@ const FormContainer = () => {
               <Tick fillColor="#006AFF" />
             </span>
           )}
-          <small className="form__progress-label">Business Category</small>
+          <small
+            className={
+              "form__progress-label " +
+              (formIndex === 3 ? "" : "form__progress-label--inactive")
+            }
+          >
+            Business Category
+          </small>
         </div>
       </div>
 

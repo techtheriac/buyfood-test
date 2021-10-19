@@ -22,7 +22,7 @@ const VerifyAccount = () => {
         <small>Select a verification method</small>
 
         <span className="flow-hr-xs toggle__btn__group">
-        <input type="radio" name="account" id="bvn" value="small" checked />
+          <input type="radio" name="account" id="bvn" value="small" checked />
           <label
             for="bvn"
             className="btn__pill no-margin"
@@ -32,8 +32,13 @@ const VerifyAccount = () => {
           >
             BVN
           </label>
-          
-          <input type="radio" name="account" id="personalAccount" value="small" />
+
+          <input
+            type="radio"
+            name="account"
+            id="personalAccount"
+            value="small"
+          />
           <label
             for="personalAccount"
             className="btn__pill"
