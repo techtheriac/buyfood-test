@@ -1,3 +1,5 @@
+@use "typography";
+
 %btn {
   border-radius: 0.8rem;
   padding: 1.4rem 3rem;
@@ -108,5 +110,28 @@
 
   @media screen and (max-width: 790px) {
     visibility: hidden;
+  }
+}
+
+.toggle__btn__group {
+  input[type="radio"]:checked + label {
+    background-color: var(--blue-00);
+  }
+
+  label {
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+  }
+}
+
+.form__progress-label {
+  @extend %font-18;
+  font-weight: 500;
+  @media screen and (max-width: 790px) {
+    visibility: hidden;
+  }
+
+  &--inactive {
+    color: var(--blue-02);
   }
 }

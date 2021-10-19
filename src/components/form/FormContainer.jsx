@@ -18,7 +18,7 @@ const FormContainer = () => {
           ) : (
             <span className="form__progress-pill">1</span>
           )}
-          <small>Verify Account</small>
+          <small className="form__progress-label">Verify Account</small>
         </div>
         <div>
           { formIndex !== 3 ? (
@@ -28,7 +28,7 @@ const FormContainer = () => {
               <Tick fillColor="#006AFF" />
             </span>
           )}
-          <small>Social Handlers</small>
+          <small className="form__progress-label">Social Handlers</small>
         </div>
         <p>
           {formIndex == 1 || formIndex == 2 ? (
@@ -38,7 +38,7 @@ const FormContainer = () => {
               <Tick fillColor="#006AFF" />
             </span>
           )}
-          <small>Business Category</small>
+          <small className="form__progress-label">Business Category</small>
         </p>
       </div>
 
